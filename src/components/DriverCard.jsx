@@ -1,8 +1,7 @@
+import Rating from "./Rating";
 
-import Rating from './Rating'
-
-const DriverCard = (props) => {
-  const { name, rating, img, car } = props
+const DriverCard = ({ name, rating, img, car }) => {
+  // const { name, rating, img, car } = props
 
   return (
     <div className="DriverCard">
@@ -10,11 +9,13 @@ const DriverCard = (props) => {
       <div className="driverInfo">
         <h3>{name}</h3>
         <Rating>{rating}</Rating>
-        <div>{car.model} - {car.licensePlate} </div>
+        <div>
+          {car.model} - {car.licensePlate}
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default DriverCard;
 // import Rating from './Rating';

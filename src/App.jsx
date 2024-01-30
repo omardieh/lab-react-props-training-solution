@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-import "./App.css";
 import IdCard from "./components/IdCard";
 import Greetings from "./components/Greetings";
 import Random from "./components/Random";
@@ -8,9 +6,11 @@ import CreditCard from "./components/CreditCard";
 import Rating from "./components/Rating";
 import DriverCard from "./components/DriverCard";
 
+const mainStyle = { padding: 30 };
+
 function App() {
   return (
-    <div className="App" style={{ padding: 30 }}>
+    <div className="App" style={mainStyle}>
       <h2>IdCard</h2>
       <IdCard
         lastName="Doe"
@@ -32,6 +32,8 @@ function App() {
 
       <h2>Greetings</h2>
 
+      {/* props.lang */}
+      {/* props.children */}
       <Greetings lang="de">Ludwig</Greetings>
       <Greetings lang="fr">François</Greetings>
 
@@ -42,7 +44,7 @@ function App() {
 
       <h2>BoxColor</h2>
 
-      <BoxColor r={255} g={0} b={0} />
+      <BoxColor r={255} g={150} b={170} />
       <BoxColor r={128} g={255} b={0} />
 
       <h2>CreditCard</h2>
